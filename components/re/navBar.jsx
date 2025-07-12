@@ -8,8 +8,9 @@ import logo from "../../public/logo.jpg";
 import { useEffect, useRef, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Dialog, DialogTitle } from "@mui/material";
-import CustomDailog from "../Dailogs/CustomDailog"
+import CustomDailog from "../Dailogs/CustomDailog";
 import { IoIosArrowDown } from "react-icons/io";
+
 export default function NavBar() {
   const [isOpen, setOpen] = useState(false);
   const [newMenuDailog, setNewMenuDailog] = useState(false);
@@ -31,7 +32,6 @@ export default function NavBar() {
   const closeDialog = () => setNewMenuDailog(false);
   return (
     <>
-
       <div>
         <div className="App ">
           {newMenuDailog && (
@@ -51,25 +51,26 @@ export default function NavBar() {
                       className=" flex  px-6 rounded-md py-2   hover:text-rose-500  font-bold "
                       href={"/itservices"}
                     >
-                      IT  Services
+                      IT Services
                     </Link>
-                    <Link
-                      onClick={() => closeDialog()}
-
-                      href={"/itservices"}
-                    >
+                    <Link onClick={() => closeDialog()} href={"/itservices"}>
                       <ul className="  px-6 ">
-                        <li className="hover:text-rose-500  cursor-pointer">Website Design and Development</li>
-                        <li className="hover:text-rose-500 cursor-pointer">Digital Marketing</li>
-                        <li className="hover:text-rose-500 cursor-pointer">Video  Editing</li>
-                        <li className="hover:text-rose-500 cursor-pointer">Digital IT services</li>
-
+                        <li className="hover:text-rose-500  cursor-pointer">
+                          Website Design and Development
+                        </li>
+                        <li className="hover:text-rose-500 cursor-pointer">
+                          Digital Marketing
+                        </li>
+                        <li className="hover:text-rose-500 cursor-pointer">
+                          Video Editing
+                        </li>
+                        <li className="hover:text-rose-500 cursor-pointer">
+                          Digital IT services
+                        </li>
                       </ul>
                     </Link>
-
                   </div>
                   <div>
-
                     <Link
                       // onClick={() => closeDialog()}
 
@@ -78,18 +79,56 @@ export default function NavBar() {
                     >
                       Business
                     </Link>
-                    <Link
-                      onClick={() => closeDialog()}
-
-                      href={"/business"}
-                    >
+                    <Link onClick={() => closeDialog()} href={"/business"}>
                       <ul className="  px-6 ">
-                        <li className="hover:text-rose-500  cursor-pointer">International Shipping</li>
+                        <li className="hover:text-rose-500  cursor-pointer">
+                          International Shipping
+                        </li>
                       </ul>
                     </Link>
                   </div>
 
+                  <div>
+                    <Link
+                      // onClick={() => closeDialog()}
 
+                      className=" flex  px-6 rounded-md py-2   hover:text-rose-500  font-bold "
+                      href={"/financialConsulting"}
+                    >
+                      FINANCIAL CONSULTANCY
+                    </Link>
+                    <Link
+                      onClick={() => closeDialog()}
+                      href={"/financialConsulting"}
+                    >
+                      <ul className="  px-6 ">
+                        <li className="hover:text-rose-500  cursor-pointer">
+                          GST Registration & Filling
+                        </li>
+                      </ul>
+                    </Link>
+
+                    <ul className="  px-6 ">
+                      <li className="hover:text-rose-500  cursor-pointer">
+                        ITR return
+                      </li>
+                    </ul>
+                    <ul className="  px-6 ">
+                      <li className="hover:text-rose-500  cursor-pointer">
+                        TDS Return
+                      </li>
+                    </ul>
+                    <ul className="  px-6 ">
+                      <li className="hover:text-rose-500  cursor-pointer">
+                        Account management
+                      </li>
+                    </ul>
+                    <ul className="  px-6 ">
+                      <li className="hover:text-rose-500  cursor-pointer">
+                        Other Services & Talk with Experts
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </ul>
             </div>
@@ -101,7 +140,7 @@ export default function NavBar() {
         <nav className="flex justify-between  items-center pl-4 ">
           <div>
             <label className="text-primaryGreen font-bold   text-xl   pl-4 flex items-center cursor-pointer ">
-              <Link href={"/"} >
+              <Link href={"/"}>
                 <Image src={logo} height={100} width={100} alt="logo"></Image>
               </Link>
             </label>
@@ -149,11 +188,16 @@ function LapView({ setopen, openDialog, closeDialog }) {
             </Link>
 
             <span
-              onClick={() => { setopen(); openDialog() }}
-              onMouseEnter={() => { setopen(); openDialog() }}
+              onClick={() => {
+                setopen();
+                openDialog();
+              }}
+              onMouseEnter={() => {
+                setopen();
+                openDialog();
+              }}
               // onMouseLeave={() => { setopen(); closeDialog() }}
               className=" flex  px-6 rounded-md py-2   hover:text-rose-500  font-bold items-center "
-
             >
               Services <IoIosArrowDown className="ml-1" />
             </span>
@@ -185,10 +229,8 @@ function LapView({ setopen, openDialog, closeDialog }) {
                 className=" cursor-pointer text-blue-400 flex items-center  "
               >
                 <FaPhoneAlt className="mr-2" />
-
                 9120183508
               </a>
-
             </span>
 
             <Link
@@ -200,27 +242,29 @@ function LapView({ setopen, openDialog, closeDialog }) {
             </Link>
           </li>
 
-          {<motion.li
-            className="list-none"
-            initial="initial"
-            animate="animate"
-            whileHover={{
-              scale: 1.2,
-            }}
-            transition={{
-              duration: 0.7,
-              delay: 0.1,
-              ease: [0.6, 0.01, 0.05, 0.95],
-            }}
-          >
-            <Link
-              onClick={setopen}
-              className=" text-lg rounded-3xl px-8 bg-pH py-3 text-white"
-              href={"/login"}
+          {
+            <motion.li
+              className="list-none"
+              initial="initial"
+              animate="animate"
+              whileHover={{
+                scale: 1.2,
+              }}
+              transition={{
+                duration: 0.7,
+                delay: 0.1,
+                ease: [0.6, 0.01, 0.05, 0.95],
+              }}
             >
-              Login
-            </Link>
-          </motion.li>}
+              <Link
+                onClick={setopen}
+                className=" text-lg rounded-3xl px-8 bg-pH py-3 text-white"
+                href={"/login"}
+              >
+                Login
+              </Link>
+            </motion.li>
+          }
         </div>
       </div>
     </>
