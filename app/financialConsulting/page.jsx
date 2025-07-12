@@ -1,96 +1,66 @@
-"use client";
-import { useState } from "react";
+import Link from "next/link";
 
-export default function GstRegistration() {
-  const [formData, setFormData] = useState({
-    businessName: "",
-    pan: "",
-    email: "",
-    mobile: "",
-    address: "",
-    state: "",
-  });
+const services = [
+  {
+    name: "GST Registration & Filing",
+    href: "/gst-registration",
+    gradient: "from-fuchsia-500 to-purple-600",
+  },
+  {
+    name: "ITR Return",
+    href: "/itr-return",
+    gradient: "from-green-400 to-emerald-600",
+  },
+  {
+    name: "TDS Return",
+    href: "/tds-return",
+    gradient: "from-yellow-400 to-orange-500",
+  },
+  {
+    name: "Account Management",
+    href: "/account-management",
+    gradient: "from-sky-500 to-blue-600",
+  },
+  {
+    name: "Other Services",
+    href: "/other-services",
+    gradient: "from-rose-500 to-red-600",
+  },
+  {
+    name: "Talk with Experts",
+    href: "/talk-to-experts",
+    gradient: "from-cyan-500 to-indigo-500",
+  },
+];
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert("✅ GST Registration Submitted Successfully!");
-  };
-
+export default function FinancialConsulting() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center p-6">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white shadow-2xl rounded-2xl w-full max-w-md p-8"
-      >
-        <h2 className="text-3xl font-extrabold text-center text-purple-700 mb-8">
-          GST Registration Form
-        </h2>
+    <div className="min-h-screen bg-gradient-to-tr from-indigo-200 via-pink-200 to-yellow-100 py-16 px-6">
+      <h1 className="text-5xl font-extrabold text-center text-purple-800 mb-14 drop-shadow-lg">
+        💼 Financial Consulting Services
+      </h1>
 
-        {[
-          { label: "Business Name", name: "businessName", type: "text" },
-          { label: "PAN", name: "pan", type: "text" },
-          { label: "Email", name: "email", type: "email" },
-          { label: "Mobile", name: "mobile", type: "tel" },
-        ].map((field) => (
-          <div key={field.name} className="mb-5">
-            <label className="block text-sm font-semibold text-gray-700 mb-1">
-              {field.label}
-            </label>
-            <input
-              type={field.type}
-              name={field.name}
-              value={formData[field.name]}
-              onChange={handleChange}
-              required
-              className="w-full p-3 rounded-lg border border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
-            />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className={`bg-gradient-to-br ${service.gradient} text-white p-6 rounded-3xl shadow-2xl backdrop-blur-sm bg-opacity-90 hover:scale-105 transition duration-300 flex flex-col justify-between`}
+          >
+            <div>
+              <h2 className="text-2xl font-bold mb-3 drop-shadow-md">{service.name}</h2>
+              <p className="text-sm opacity-90">Click below to explore this service.</p>
+            </div>
+
+            <div className="mt-6">
+              <Link href={service.href}>
+                <button className="w-full bg-white text-black font-semibold py-2 px-4 rounded-xl shadow hover:bg-yellow-100 hover:text-purple-700 transition duration-300">
+                  🚀 Explore Service
+                </button>
+              </Link>
+            </div>
           </div>
         ))}
-
-        <div className="mb-5">
-          <label className="block text-sm font-semibold text-gray-700 mb-1">
-            Address
-          </label>
-          <textarea
-            name="address"
-            value={formData.address}
-            onChange={handleChange}
-            required
-            className="w-full p-3 rounded-lg border border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
-          />
-        </div>
-
-        <div className="mb-6">
-          <label className="block text-sm font-semibold text-gray-700 mb-1">
-            State
-          </label>
-          <select
-            name="state"
-            value={formData.state}
-            onChange={handleChange}
-            required
-            className="w-full p-3 rounded-lg border border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
-          >
-            <option value="">-- Select State --</option>
-            <option value="Chhattisgarh">Chhattisgarh</option>
-            <option value="Maharashtra">Maharashtra</option>
-            <option value="Delhi">Delhi</option>
-            <option value="Tamil Nadu">Tamil Nadu</option>
-          </select>
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-md"
-        >
-          🚀 Submit
-        </button>
-      </form>
+      </div>
     </div>
   );
 }

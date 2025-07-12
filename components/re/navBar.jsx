@@ -86,48 +86,14 @@ export default function NavBar() {
                         </li>
                       </ul>
                     </Link>
-                  </div>
-
-                  <div>
                     <Link
                       // onClick={() => closeDialog()}
 
-                      className=" flex  px-6 rounded-md py-2   hover:text-rose-500  font-bold "
+                      className=" flex  px-6 rounded-md py-2   hover:text-rose-500  "
                       href={"/financialConsulting"}
                     >
-                      FINANCIAL CONSULTANCY
+                      Financial Consultancy
                     </Link>
-                    <Link
-                      onClick={() => closeDialog()}
-                      href={"/financialConsulting"}
-                    >
-                      <ul className="  px-6 ">
-                        <li className="hover:text-rose-500  cursor-pointer">
-                          GST Registration & Filling
-                        </li>
-                      </ul>
-                    </Link>
-
-                    <ul className="  px-6 ">
-                      <li className="hover:text-rose-500  cursor-pointer">
-                        ITR return
-                      </li>
-                    </ul>
-                    <ul className="  px-6 ">
-                      <li className="hover:text-rose-500  cursor-pointer">
-                        TDS Return
-                      </li>
-                    </ul>
-                    <ul className="  px-6 ">
-                      <li className="hover:text-rose-500  cursor-pointer">
-                        Account management
-                      </li>
-                    </ul>
-                    <ul className="  px-6 ">
-                      <li className="hover:text-rose-500  cursor-pointer">
-                        Other Services & Talk with Experts
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </ul>
