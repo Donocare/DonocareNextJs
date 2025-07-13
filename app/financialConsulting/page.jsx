@@ -3,32 +3,32 @@ import Link from "next/link";
 const services = [
   {
     name: "GST Registration & Filing",
-    href: "/gst-registration",
+    href: "/financialconsulting/gstregistration",
     gradient: "from-fuchsia-500 to-purple-600",
   },
   {
     name: "ITR Return",
-    href: "/itr-return",
+    href: "/financialconsulting/itr-return",
     gradient: "from-green-400 to-emerald-600",
   },
   {
     name: "TDS Return",
-    href: "/tds-return",
+    href: "/financialconsulting/tds-return",
     gradient: "from-yellow-400 to-orange-500",
   },
   {
     name: "Account Management",
-    href: "/account-management",
+    href: "/financialconsulting/account-management",
     gradient: "from-sky-500 to-blue-600",
   },
   {
     name: "Other Services",
-    href: "/other-services",
+    href: "/financialconsulting/other-services",
     gradient: "from-rose-500 to-red-600",
   },
   {
     name: "Talk with Experts",
-    href: "/talk-to-experts",
+    href: "/financialconsulting/talk-to-experts",
     gradient: "from-cyan-500 to-indigo-500",
   },
 ];
