@@ -87,10 +87,10 @@ export default function NavBar() {
                       </ul>
                     </Link>
                     <Link
-                      // onClick={() => closeDialog()}
+                      onClick={() => closeDialog()}
 
                       className=" flex  px-6 rounded-md py-2   hover:text-rose-500  "
-                      href={"/financialConsulting"}
+                      href={"/financial-consulting"}
                     >
                       Financial Consultancy
                     </Link>
