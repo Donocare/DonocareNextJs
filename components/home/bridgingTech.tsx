@@ -50,7 +50,7 @@ const Tech1 = ()=>{
                     we can help you get of the ground by providing the necessary
                     support and resources to help you grow and succees . Our
                     team of experts can assist you with everything from product
-                    drvelopment to marketing and sales.
+                    development to marketing and sales.
                   </p>
                 </div>
               </div>
