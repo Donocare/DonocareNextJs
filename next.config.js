@@ -9,11 +9,15 @@
 // };
 
 // module.exports = nextConfig;
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
-  images: { unoptimized: true },
+  reactStrictMode: true,          // turn back on if you want
+  images: { unoptimized: true },  // keep if you rely on it
   experimental: {
-    appDir: true,
+    // App Router is *on* by default now – no need for appDir
+    serverActions: true,          // only if you use them
+    typedRoutes: true,            // optional quality‑of‑life
   },
 };
 
