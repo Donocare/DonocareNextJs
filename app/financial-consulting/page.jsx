@@ -3,37 +3,37 @@ import Link from "next/link";
 const services = [
   {
     name: "GST Registration & Filing",
-    href: "/financialconsulting/gstregistration",
+    href: "/financial-consulting/gst-registration",
     gradient: "from-fuchsia-500 to-purple-600",
   },
   {
     name: "ITR Return",
-    href: "/financialconsulting/itr-return",
+    href: "/financial-consulting/itr-return",
     gradient: "from-green-400 to-emerald-600",
   },
   {
     name: "TDS Return",
-    href: "/financialconsulting/tds-return",
+    href: "/financial-consulting/tds-return",
     gradient: "from-yellow-400 to-orange-500",
   },
   {
     name: "Account Management",
-    href: "/financialconsulting/account-management",
+    href: "/financial-consulting/account-management",
     gradient: "from-sky-500 to-blue-600",
   },
   {
     name: "Other Services",
-    href: "/financialconsulting/other-services",
+    href: "/financial-consulting/other-services",
     gradient: "from-rose-500 to-red-600",
   },
   {
     name: "Talk with Experts",
-    href: "/financialconsulting/talk-to-experts",
+    href: "/financial-consulting/talk-to-experts",
     gradient: "from-cyan-500 to-indigo-500",
   },
 ];
 
-export default function FinancialConsulting() {
+export default function financialconsulting() {
   return (
     <div className="min-h-screen bg-gradient-to-tr from-indigo-200 via-pink-200 to-yellow-100 py-16 px-6">
       <h1 className="text-5xl font-extrabold text-center text-purple-800 mb-14 drop-shadow-lg">
