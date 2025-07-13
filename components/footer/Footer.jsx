@@ -91,7 +91,7 @@ const Footer = () => {
               <FaPhoneAlt className="mr-2" /> 9120183508
             </p>
             <p className="flex items-center">
-              <FaEnvelope className="mr-2" /> conatct@Donocare.com
+              <FaEnvelope className="mr-2" /> contact@donocare.com
             </p>
           </div>
           {/* Description Section */}

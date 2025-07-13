@@ -36,11 +36,11 @@ const services = [
 export default function financialconsulting() {
   return (
     <div className="min-h-screen bg-gradient-to-tr from-indigo-200 via-pink-200 to-yellow-100 py-16 px-6">
-      <h1 className="text-5xl font-extrabold text-center text-purple-800 mb-14 drop-shadow-lg">
+      <h1 className="text-xl md:text-5xl font-extrabold text-center text-purple-800 mb-4 md:mb-14 drop-shadow-lg">
         💼 Financial Consulting Services
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1  lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {services.map((service, index) => (
           <div
             key={index}
