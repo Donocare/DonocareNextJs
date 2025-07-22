@@ -4,37 +4,37 @@ import { useState } from "react";
 const services = [
   {
     name: "GST Registration & Filing",
-    href: "/gst-registration",
+    href: "/financial-consulting/gst-registration",
     gradient: "from-fuchsia-500 to-purple-600",
     isActive: true,
   },
   {
     name: "ITR Return",
-    href: "/itr-return",
+    href: "/financial-consulting/itr-return",
     gradient: "from-green-400 to-emerald-600",
     isActive: false,
   },
   {
     name: "TDS Return",
-    href: "/tds-return",
+    href: "/financial-consulting/tds-return",
     gradient: "from-yellow-400 to-orange-500",
     isActive: false,
   },
   {
     name: "Account Management",
-    href: "/account-management",
+    href: "/financial-consulting/account-management",
     gradient: "from-sky-500 to-blue-600",
     isActive: true,
   },
   {
     name: "Other Services",
-    href: "/other-services",
+    href: "/financial-consulting/other-services",
     gradient: "from-rose-500 to-red-600",
     isActive: true, // ❌ Not created yet
   },
   {
     name: "Talk with Experts",
-    href: "/talk-to-experts",
+    href: "/financial-consulting/talk-to-experts",
     gradient: "from-cyan-500 to-indigo-500",
     isActive: false,
   },
@@ -49,7 +49,7 @@ export default function FinancialConsulting() {
         💼 Financial Consulting Services
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1  lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {services.map((service, index) => (
           <div
             key={index}
